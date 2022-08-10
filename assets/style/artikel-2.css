@@ -9,7 +9,9 @@ body{
 	padding: 5px;
 	animation: animasiAll 3s ease;
 	font-family: 'Quicksand', sans-serif;
-	text-align: justify;
+	max-width:710px;
+	margin: auto;
+	background-color: #eee;
 }
 
 /*Awal Header*/
@@ -25,6 +27,8 @@ header nav {
 	top: 0;
 	font-family: 'Righteous', cursive;
 	letter-spacing: 2px;
+	max-width: 680px;
+	margin: auto;
 }
 header nav h1{
 	color: white;
@@ -53,14 +57,15 @@ aside{
 	position: fixed;
 	background-color: #f0edcc;
 	bottom: 0px;
-	right: 0px;
-	top: 60px;
+	left: 0px;
+	top: 0px;
 	z-index: 2;
-	width: 100vw;
+	width: 240px;
 	text-align: center;
 	transition: 1s ease-in;
-	transform: translateX(100%);
+	transform: translateX(-100%);
 	font-size: 1.6rem;
+	padding: 15px;
 } 
 aside .my{
 	margin:20px 0px;
@@ -84,19 +89,22 @@ aside ul li a {
 aside ul li a:hover{
 	font-weight: bold;
 	text-shadow: 5px 5px 10px green;
-} 
-aside ul li:nth-child(4){
+}
+aside ul li:nth-child(6){
 	font-weight: bold;
 	text-shadow: 5px 5px 10px green;
-} 
+}  
 /*Akhir Aside*/
 
 main{
-	margin: 28px;
-	padding-top: 55px;
+	margin-top: 55px;
+	background-color: #fff;
+	padding: 25px;
 }
-main #content h1{
-	text-align: left;
+main #content ul li {
+	list-style: none;
+	text-align: right;
+	opacity: .5;
 }
 main #content .img{
 	display: flex;
@@ -109,55 +117,20 @@ main #content h4{
 	text-align: center;
 	opacity: .5;
 	margin-top: 5px;
-
-}
-main #content ul li {
-	list-style: none;
-	text-align: right;
-	opacity: .5;
 }
 main #content ol li {
 	margin-left: 25px;
-	text-align: left;
 }
 
-footer{
-	padding: 10px;
-	background-color: #02343f;
-	margin: -25px 15px;
-}
-
-footer a  {
-	text-decoration: none;
-	color: white;
-}
-
-footer p{
-	text-align: center;
-}
-
-footer p:hover {
-	text-shadow: 5px 5px 25px white;
-}
-.contact {
-	position: fixed;
-	bottom: 10px;
-	width: 15vw;
-	right: 20px;
-}
-.contact{
-	animation: wa 25s ease-out ;
-}
 .contact a{
 	text-decoration: none;
 }
-.contact p{
-	font-size: 25px;
-	text-align: center;
-}
-.contact img{
-	width: 15vw;
-	margin: auto;	
+.contact a img{
+	width: 45px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	z-index: 999px;
 }
 .contact img:hover{
 	transform: scale(1.2);
@@ -175,23 +148,7 @@ footer p:hover {
 		opacity: 1;
 	}
 }
-@keyFrames wa{
-	0%{
-		transform: translateY(-200%);
-		transform: scale(0);
-	}
-	50%{
-		transform: translateY(-150%);
-		transform: scale(.5);
-	}
-	75%{
-		transform: translateY(-75%);
-	}
-	50%{
-		transform: translateY(0%);
-		transform: scale(1);
-	}
-}
+
 /*DOM CSS*/
 .satu{
 	transform:rotate(45deg) translate(1px,1px);
@@ -211,28 +168,7 @@ footer p:hover {
 /*Media query*/
 @media(min-width: 600px)
 {
-	body
-	{
-		max-width:700px;
-		margin: auto;
-		background-color: #eee;
-	}
-	main
-	{
-		background-color: #fff;
-		padding: 35px;
-	}
 	main #content .img img{
-	width: 35vw;
-	}
-	.contact {
-	position: fixed;
-	bottom: 70px;
-	width: 15vw;
-	right: 170px;
-	}
-	.contact img{
-	width: 5vw;
-	margin: auto;	
+	width: 500px;
 	}
 }

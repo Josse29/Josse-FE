@@ -1,0 +1,116 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%) ;
+}
+.wrapper{
+	margin: auto;
+	max-width:400px;
+	width: 100%;
+	background: #fff;
+	border-radius: 5px ;
+	padding: 25px;
+}
+.wrapper .inputField{
+	display: flex;
+	justify-content: space-evenly;
+	height: 35px;
+	width: 100%;
+	margin: 12px 0px;
+}
+.inputField input{
+	width: 85%;
+	height: 100%;
+	padding-left:5px ;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 2px;
+}
+.inputField button{
+	width: 12%;
+	height: 100%;
+	background: #8E49E8;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 3px;
+	opacity: 0.6;
+	pointer-events: none;
+}
+.inputField button.active{
+	opacity: 1;
+	pointer-events: auto;
+}
+.inputField button:hover{
+	filter: brightness(.9);
+}
+.wrapper ul.todoList{
+	max-height: 250px;
+	overflow-y: auto;
+}
+.wrapper ul.todoList li{
+	list-style: none;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	background: #f2f2f2;
+	border-radius: 3px;
+	margin: 5px 3px;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.wrapper ul.todoList li span{
+	position: absolute;
+	right: -60px;
+	color: #fff;
+	width: 45px;
+	text-align: center;
+	background-color: #e74c3c;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.wrapper ul.todoList li:hover span{
+	right: 0;
+	transition: all .1s ease-in;
+}
+.wrapper ul.todoList li span:hover{
+	filter: brightness(.9);
+}
+.wrapper .footer{
+	margin: 15px 1px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center ;
+}
+.footer button{
+	background: #8E49E8;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 15px;
+	border-radius: 3px;
+	padding: 5px;
+	outline: none;
+	opacity: 0.6;
+	pointer-events: none;
+}
+.footer button.active{
+	opacity: 1;
+	pointer-events: auto;
+}
+.wrapper .footer button:hover{
+	filter: brightness(.9);
+}
+a.home{
+	color: salmon;
+	text-decoration: none;
+	font-weight: bold;
+}
