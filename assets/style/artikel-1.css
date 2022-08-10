@@ -60,8 +60,8 @@ aside{
 	left: 0px;
 	top: 0px;
 	z-index: 2;
-	width: 240px;
-	text-align: center;
+	width: 190px;
+	text-align: left;
 	transition: 1s ease-in;
 	transform: translateX(-100%);
 	font-size: 1.6rem;
@@ -69,11 +69,8 @@ aside{
 } 
 aside .my{
 	margin:20px 0px;
+	text-align: center;
 }
-aside .my h2{
-	margin:15px 0px;
-}
-
 aside ul li {
 	list-style: none;
 	margin-bottom: 20px;
