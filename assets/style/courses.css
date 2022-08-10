@@ -96,7 +96,7 @@ aside ul li:nth-child(4){
 }  
 /*Akhir Aside*/
 
-main{
+main #content{
 	margin-top: 45px;
 	background-color: #fff;
 	height: 100vh;
