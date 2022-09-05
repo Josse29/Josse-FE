@@ -13,6 +13,7 @@
         <tr>
             <td>${i+1}</td>
             <td>${value.word}</td>
+            <td>${value.mean}</td>
             <td>${value.sentence}</td>
             <td>
                 <button class="btn btn-sm btn-success" onclick="find(${value.id})">
@@ -41,10 +42,11 @@
     kamusKu.length != 0 ? kamusKu.findLast((item) => id = item.id) : id = 0
     if(document.getElementById('id').value){
 
-        //edit kamusKu array based on value
+        //edit kamusKu array based on id
         kamusKu.forEach(value => {
             if(document.getElementById('id').value == value.id){
-                value.word      = document.getElementById('word').value, 
+                value.word      = document.getElementById('word').value
+                value.mean  = document.getElementById('mean').value
                 value.sentence  = document.getElementById('sentence').value
             }
         });
@@ -57,8 +59,9 @@
         //get data from form
         var item = {
             id        : id + 1, 
-            word      : document.getElementById('word').value, 
-            sentence  : document.getElementById('sentence').value, 
+            word      : document.getElementById('word').value,
+            mean  : document.getElementById('mean').value,
+            sentence  : document.getElementById('sentence').value
         }
         //add item data to array kamusKu
         kamusKu.push(item)
@@ -82,6 +85,7 @@
         {
            document.getElementById('id').value = value.id
            document.getElementById('word').value = value.word
+           document.getElementById('mean').value = value.mean
            document.getElementById('sentence').value = value.sentence
         }
         })

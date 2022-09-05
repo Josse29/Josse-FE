@@ -93,7 +93,8 @@ aside ul li:nth-child(1){
 }  
 /*Akhir Aside*/
 
-main{
+main
+{
 	margin-top: 60px;
 	background-color: #fff;
 }
@@ -107,9 +108,9 @@ main #content article .saya{
 }
 main #content article .saya img{
 	float: right;
-	width: 28vw;
 	margin-left: 15px;
 	margin-top: 13px;
+	width: 27vw;
 }
 main #content article .saya h1{
 	text-align: right;
@@ -138,7 +139,7 @@ main #content article .hobby h3{
 }
 main #content article .hobby img{
 	float: left;
-	width: 40vw;
+	width: 37vw;
 	box-shadow:  8px 8px 1px green ;
 	margin-right: 18px;
 	margin-bottom: 10px;
@@ -146,10 +147,58 @@ main #content article .hobby img{
 main #content article .hobby ul li{
 	list-style: none;
 }
-
+main #content article .hobby ul li:nth-child(4) h3 {
+	list-style: none;
+	text-align: right;
+}
+main #content article .hobby ul li:nth-child(4){
+	margin-top: 3px;
+}
+main #content article .projects {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 12px;
+}
+main #content article .projects img {
+	max-width: 75vw;
+	margin-bottom: 15px;
+}
+main #content article .projects .project-1 h2{
+	text-align: left;
+	font-size: 15px;
+}
+main #content article .projects .project-1 a{
+	text-decoration: none;
+	font-size: 12px;
+	display: block;
+	margin-bottom: 12px;
+	color: black;
+	opacity: .8;
+}
+main #content article .projects .project-2 h2{
+	margin-top: 7px;
+	text-align: left;
+	font-size: 15px;
+}
+main #content article .projects .project-2 a{
+	text-decoration: none;
+	font-size: 12px;
+	display: block;
+	margin-bottom: 12px;
+	color: black;
+	opacity: .8;
+}
+main #content article h1{
+	font-size: 2rem;
+	text-align: center;
+	display: block;
+	margin-bottom: 10px;
+}
 main #content article .skill h1{
 	font-size: 2rem;
 	text-align: center;
+	margin-top: 10px;
 }
 main #content article .skill .content{
 	display: flex;
@@ -179,9 +228,6 @@ main #content article .skill .content{
 	0%{	
 		opacity: 0;
 	}
-	50%{
-		opacity: .5;
-	}
 	100%{
 		opacity: 1;
 	}
@@ -202,25 +248,19 @@ main #content article .skill .content{
 .hide{
 	transform: translateX(0%);
 }
-
-/*Media query*/
-@media(min-width: 600px)
+/*media query tablet*/
+@media(min-width: 575px)
 {
-	main
-	{
-		background-color: #fff;
-		margin-top: 55px;
-	}
 	main #content article .saya img
 	{
-	width: 10vw;
+	width: 150px;
 	}
-	main #content article .hobby img{
-	width: 20vw;
-	}
-	main #content article .hobby ul li:nth-child(4) h3
+	main #content article .hobby img
 	{
-	margin-top: 5px;
-	text-align: right;
+	width: 200px;
+	}
+	main #content article .projects img {
+	max-width: 300px;
+	margin-bottom: 15px;
 	}
 }

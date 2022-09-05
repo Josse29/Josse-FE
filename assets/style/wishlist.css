@@ -1,0 +1,87 @@
+h6{
+	text-align: right;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%) ;
+	overflow: hidden;
+}
+.wrapper{
+	margin: auto;
+	max-width:400px;
+	width: 100%;
+	background: #fff;
+	border-radius: 5px ;
+	padding: 25px;
+}
+.wrapper .inputField
+{
+	display: flex;
+	justify-content: space-evenly;
+	height: 25px;
+	width: 100%;
+	margin: 12px 0px;	
+}
+.wrapper .inputField input#new_text
+{
+	width: 85%;
+	height: 100%;
+	padding-left:5px ;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 2px;
+}
+.wrapper .inputField button
+{
+	width: 12%;
+	height: 100%;
+	background: #8E49E8;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-size: 17px;
+	border-radius: 3px;
+	opacity: 0.6;
+	pointer-events: none;		
+}
+.inputField button.active{
+	opacity: 1;
+	pointer-events: auto;
+}
+.inputField button:hover{
+	filter: brightness(.9);
+}
+.wrapper ul#todoList{
+	max-height: 250px;
+	overflow-y: auto;
+}
+.wrapper ul#todoList li{
+	list-style: none;
+	background: #f2f2f2;
+	border-radius: 3px;
+	margin: 5px 3px;
+	padding: 10px;
+	word-wrap: break-word;
+}
+.wrapper a.link {
+	text-decoration: none;
+	text-align: right;
+	display: block;
+	margin-top:25px;
+	color: salmon;
+}
+@media(max-width: 600px){
+	.wrapper{
+		max-width: 90vw;
+		padding: 15px;
+		margin-top: 30px;
+	}
+}

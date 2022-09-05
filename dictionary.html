@@ -16,7 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
 
-    <!-- Css data rable -->
+    <!-- Css data table -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
     <style>
@@ -26,6 +26,7 @@
             font-weight: bold;
             display: block;
             margin-top: 5px;
+            text-align: right;
         }
     </style>
 
@@ -43,10 +44,13 @@
                     <div class="card-body bg-light">
                         <form id="form">
                             <input type="hidden" name="id" id="id">
-                            <label for="">Word</label>
+                            <label for="word">Word</label>
                             <input type="text" placeholder="input a word" class="form-control" name="word" id="word" required>
                             <br>
-                            <label for="">Sentence</label>
+                            <label for="mean">Mean</label>
+                            <input type="text" placeholder="input a mean" class="form-control" name="mean" id="mean" required>
+                            <br>
+                            <label for="sentence">Sentence</label>
                             <textarea name="sentence" placeholder="input a sentence" id="sentence" cols="30" rows="5" required class="form-control"></textarea>
                             <br>
                             <button class="btn btn-sm btn-success" type="button" onclick="save()">Save</button>
@@ -65,6 +69,7 @@
                                     <tr>
                                         <th>Id</th>
                                         <th>Word</th>
+                                        <th>Mean</th>
                                         <th>Sentence</th>
                                         <th>Edit</th>
                                         <th>Hapus</th>
