@@ -76,7 +76,22 @@ body{
 	text-align: right;
 	display: block;
 	margin-top:25px;
-	color: salmon;
+	color: violet;
+}
+.wishes{
+	overflow: hidden;
+	position: relative;
+}
+.gajadi{
+	position: absolute;
+	right: -60px;
+	cursor: pointer;
+}
+.wishes:hover .gajadi{
+	right: 10px;
+	background-color: #f2f2f2;
+	font-size: 35px;
+	color: #f2f2f2;
 }
 @media(max-width: 600px){
 	.wrapper{

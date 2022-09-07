@@ -4,7 +4,7 @@
 }
 
 body{
-	overflow: hidden;
+	overflow-x: hidden;
 	transition: .5 ease-in;
 	padding: 5px;
 	animation: animasiAll 3s ease;
@@ -87,24 +87,41 @@ aside ul li a:hover{
 	font-weight: bold;
 	text-shadow: 5px 5px 10px green;
 }
-aside ul li:nth-child(5){
+aside ul li:nth-child(8){
 	font-weight: bold;
 	text-shadow: 5px 5px 10px green;
 }  
 /*Akhir Aside*/
 
-main #content{
-	margin-top: 0px;
+main{
+	margin-top: 55px;
 	background-color: #fff;
-	height: 100vh;
+	padding: 25px;
+}
+main #content ul li {
+	list-style: none;
+	text-align: right;
+	opacity: .5;
+}
+main #content .img{
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
+main #content .img img{
+	width: 75vw;
+}
+main #content h4{
+	text-align: center;
+	opacity: .5;
+	margin-top: 5px;
+}
+main #content ol li {
+	margin-left: 25px;
+}
+
 .contact a{
 	text-decoration: none;
 }
-
 .contact a img{
 	width: 45px;
 	position: fixed;
@@ -112,7 +129,7 @@ main #content{
 	right: 30px;
 	z-index: 999px;
 }
-.contact a img:hover{
+.contact img:hover{
 	transform: scale(1.2);
 	transition: 1s ease;
 }
@@ -140,4 +157,12 @@ main #content{
 }
 .hide{
 	transform: translateX(0%);
+}
+
+/*Media query*/
+@media(min-width: 600px)
+{
+	main #content .img img{
+	width: 500px;
+	}
 }

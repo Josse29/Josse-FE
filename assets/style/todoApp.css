@@ -70,13 +70,16 @@ body{
 .wrapper ul.todoList li span{
 	position: absolute;
 	right: -60px;
-	color: #fff;
-	text-align: center;
+	color: #fff;	
 	background-color: #e74c3c;
 	border-radius: 3px;
 	cursor: pointer;
-	top: 35%;
 	width: 45px;
+	top: 0px;
+	bottom: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .wrapper ul.todoList li:hover span{
 	right: 0;
@@ -111,7 +114,7 @@ body{
 	filter: brightness(.9);
 }
 a.home{
-	color: salmon;
+	color: violet;
 	text-decoration: none;
 	font-weight: bold;
 }

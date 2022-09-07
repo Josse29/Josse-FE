@@ -52,17 +52,18 @@
 		let newText = document.getElementById('new_text');
 		createList(newText.value);
 		syncLocalStorage('ADD', newText.value);
-		alert("Sooner or Later It's gonna be happened");
 		newText.value = '';
+		alert("Sooner or Later It's gonna be happened");
 	}
 		
 	function createList(text, status=false)
 	{
 		let isCheck = (status) ? 'fa-check' : '';
 		let newTodo = 
-		`<li onclick='hapus(this)'> 
-			<span onclick='checked(this)'>${text}</span>
+		`<li class='wishes'> 
+			<span onclick='checked(this)' style='cursor:pointer'>${text}</span>
 			<i class='fa ${isCheck}'></i>
+			<i class='gajadi' onclick='hapus(this)'>[x]</i>
 		</li>`;
 		todoBox.insertAdjacentHTML('afterbegin',newTodo);
 	}
@@ -74,9 +75,10 @@
 	}
 
 	function hapus(el){
-		if(confirm('Press OKE if you wanna delete this or press CANCEl if you wanna check this'))
+		if(confirm('are you sure that you wanna delete this'))
 		{
-			el.remove();
-			syncLocalStorage('DELETE', el.innerText.trim());
+			
+			el.parentElement.remove();
+			syncLocalStorage('DELETE', el.previousElementSibling.previousElementSibling.innerText.trim());
 		};
 	}
