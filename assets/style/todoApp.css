@@ -75,10 +75,8 @@ body{
 	background-color: #e74c3c;
 	border-radius: 3px;
 	cursor: pointer;
-	top: 0px;
-	bottom: 0px;
+	top: 35%;
 	width: 45px;
-	padding-top: 8px;
 }
 .wrapper ul.todoList li:hover span{
 	right: 0;
