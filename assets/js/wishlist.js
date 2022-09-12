@@ -19,7 +19,6 @@
 		}
 	}
 
-
 	if( todoFromLocal = localStorage.getItem(STORAGE_WISH))
 	{
 		todos = JSON.parse(todoFromLocal);
@@ -62,7 +61,7 @@
 		let newTodo = 
 		`<li class='wishes'> 
 			<span onclick='checked(this)' style='cursor:pointer'>${text}</span>
-			<i class='fa ${isCheck}'></i>
+			<span class='fa ${isCheck}'></span>
 			<i class='gajadi' onclick='hapus(this)'>[x]</i>
 		</li>`;
 		todoBox.insertAdjacentHTML('afterbegin',newTodo);

@@ -6,25 +6,31 @@
 }
 body{
 	display: flex;
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(to bottom, #68EACC 0%, #497BE8 100%) ;
-	overflow: hidden;
+	background: #497BE8;
+	animation: animation 1s ease-in;
 }
 .wrapper{
-	margin: auto;
+	margin: 15px auto;
 	max-width:400px;
 	width: 100%;
 	background: #fff;
 	border-radius: 5px ;
 	padding: 25px;
 }
-.wrapper .inputField{
+.wrapper form.inputField{
 	display: flex;
 	justify-content: space-evenly;
 	height: 35px;
 	width: 100%;
 	margin: 12px 0px;
+}
+.inputField select{
+	width: 85%;
+	height: 100%;
+	padding-left:5px ;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 2px;
 }
 .inputField input{
 	width: 85%;
@@ -43,21 +49,25 @@ body{
 	color: #fff;
 	font-size: 20px;
 	border-radius: 3px;
-	opacity: 0.6;
-	pointer-events: none;
 }
-.inputField button.active{
-	opacity: 1;
-	pointer-events: auto;
-}
-.inputField button:hover{
-	filter: brightness(.9);
-}
-.wrapper ul.todoList{
+.wrapper ul.todoList1{
 	max-height: 250px;
 	overflow-y: auto;
+	margin-bottom: 17px;
 }
-.wrapper ul.todoList li{
+.garis{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	height: 25px;
+	background: #497BE8;
+	color: #497BE8;
+}
+.jdl{
+	text-align: right;
+	margin: 12px;
+}
+.wrapper ul.todoList1 li{
 	list-style: none;
 	word-wrap: break-word;
 	position: relative;
@@ -67,7 +77,7 @@ body{
 	padding: 10px;
 	overflow: hidden;
 }
-.wrapper ul.todoList li span{
+.wrapper ul.todoList1 li span:nth-child(2){
 	position: absolute;
 	right: -60px;
 	color: #fff;	
@@ -81,7 +91,7 @@ body{
 	align-items: center;
 	justify-content: center;
 }
-.wrapper ul.todoList li:hover span{
+.wrapper ul.todoList1 li:hover span:nth-child(2){
 	right: 0;
 	transition: all .1s ease-in;
 }
@@ -90,9 +100,7 @@ body{
 }
 .wrapper .footer{
 	margin: 15px 1px;
-	display: flex;
-	justify-content: space-between;
-	align-items:center ;
+	display: block;
 }
 .footer button{
 	background: #8E49E8;
@@ -114,14 +122,26 @@ body{
 	filter: brightness(.9);
 }
 a.home{
-	color: violet;
+	color: #8E49E8;
 	text-decoration: none;
 	font-weight: bold;
+	text-align: right;
+	display: block;
+}
+h6{
+	text-align: center;
 }
 @media(max-width: 600px){
 	.wrapper{
 		max-width: 90vw;
 		padding: 15px;
-		margin-top: 30px;
+	}
+}
+@keyFrames animation{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
 	}
 }

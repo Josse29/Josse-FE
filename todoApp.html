@@ -15,18 +15,32 @@
 </head>
 <body>
 	<div class="wrapper">
-		<header><h1>Todo App</h1></header>
-		<div class="inputField">
-			<input type="text" placeholder="So,What are you gonna do? Don't be couch a potato!" required>
-			<button><i class="fa fa-plus"></i></button>
-		</div>
-		<ul class="todoList">
+	<header>
+		<h1 style="text-align:center;">My-TodoList</h1>
+	</header>
+		<form class="inputField" id="form2">
+			<select id="opsi1" required>
+			</select>
+			<button type="submit"><i class="fa fa-plus"></i></button>
+		</form>
+		<ul class="todoList1" id="todoList2">
 		</ul>
+		<hr>
 		<div class="footer">
-			<span>You have <span class="pendingNumber"></span> pending tasks</span>
-			<button>Well Done! </button>
+			<span>You have <span id="pendingNumber"></span> pending tasks</span>
 		</div>
 		<a href="index.html" class="home">&laquo;&nbsp;back</a>
+		<h6 class="copy">&copy; Josse Surya Pinem 2022</h6>
+		<br>
+		<div class="garis">.</div>
+		<br>
+		<h4 class="jdl">Input your habit below !</h4 >
+		<form class="inputField" id="form1">
+			<input type="text" placeholder="So,What are you gonna do? Don't be couch a potato!" id="inputHabit1" required>
+			<button type="submit"><i class="fa fa-plus"></i></button>
+		</form>
+		<ul class="todoList1" id="todoList1">
+		</ul>
 	</div>
 	<script src="assets/js/todoApp.js"></script>
 </body>
